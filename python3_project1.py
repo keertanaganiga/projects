@@ -1,7 +1,4 @@
-#!/usr/bin/env python
-# coding: utf-8
 
-# In[1]:
 
 
 from IPython.display import clear_output
@@ -22,19 +19,19 @@ def display_board(board):
     print('   |   |')
 
 
-# In[2]:
+
 
 
 test_board=["#","X","0","X","0","X","0","X","0","X"]
 
 
-# In[3]:
+
 
 
 display_board(test_board)
 
 
-# In[4]:
+
 
 
 def player_input():
@@ -49,40 +46,39 @@ def player_input():
         return ('O', 'X')
 
 
-# In[5]:
 
 
 player_input()
 
 
-# In[6]:
+
 
 
 def place_marker(board,marker,position):
     board[position]=marker
 
 
-# In[7]:
+
 
 
 place_marker(test_board,'$',8)
 display_board(test_board)
 
 
-# In[8]:
+
 
 
 def win_check(board,mark):
     return((board[7]==mark and board[8]==mark and board[9]==mark)or(board[4]==mark and board[5]==mark and board[6]==mark)or(board[1]==mark and board[2]==mark and board[3]==mark)or(board[7]==mark and board[4]==mark and board[1]==mark)or(board[8]==mark and board[5]==mark and board[2]==mark)or(board[9]==mark and board[6]==mark and board[3]==mark)or(board[7]==mark and board[5]==mark and board[3]==mark)or(board[9]==mark and board[5]==mark and board[1]==mark))
 
 
-# In[9]:
+
 
 
 win_check(test_board,'X')
 
 
-# In[10]:
+
 
 
 import random
@@ -94,14 +90,13 @@ def choose_first():
         return 'Player 1'
 
 
-# In[11]:
 
 
 def space_check(board,position):
     return board[position]==' '
 
 
-# In[12]:
+
 
 
 def full_board_check(board):
@@ -111,7 +106,7 @@ def full_board_check(board):
     return True
 
 
-# In[13]:
+
 
 
 def player_choice(board):
@@ -121,14 +116,12 @@ def player_choice(board):
     return position
 
 
-# In[14]:
 
 
 def replay():
     return input('Do you want to play again?Enter Yes or No:').lower().startswith('y')
 
 
-# In[15]:
 
 
 print('Welcome to Tic Tac Toe!')
@@ -190,9 +183,6 @@ while True:
         break
 
 
-# 
-
-# In[ ]:
 
 
 
